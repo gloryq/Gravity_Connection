@@ -8,14 +8,13 @@ extents = Vector2( 37.1929, 39.2158 )
 [node name="level1" type="Node2D"]
 
 [node name="player" type="KinematicBody2D" parent="."]
-position = Vector2( 20.689, -10.5732 )
+position = Vector2( 898.585, 147.515 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 1.85405, -1.05947 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="character_1" type="Sprite" parent="player"]
