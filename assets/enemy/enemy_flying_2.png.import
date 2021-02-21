@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Flying character 3@72x.png-8b4935f86a21b6a1aa4006f7dd20908b.stex"
+path="res://.import/enemy_flying_2.png-fe936496e1d3fa73277f81083d0e7be6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/Flying character 3@72x.png"
-dest_files=[ "res://.import/Flying character 3@72x.png-8b4935f86a21b6a1aa4006f7dd20908b.stex" ]
+source_file="res://assets/enemy/enemy_flying_2.png"
+dest_files=[ "res://.import/enemy_flying_2.png-fe936496e1d3fa73277f81083d0e7be6.stex" ]
 
 [params]
 
