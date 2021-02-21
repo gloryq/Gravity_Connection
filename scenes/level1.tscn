@@ -15,10 +15,24 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 1.85405, -1.05947 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="character_1" type="Sprite" parent="player"]
+position = Vector2( -0.107635, -0.648842 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 1 )
+
+[node name="player2" type="KinematicBody2D" parent="."]
+position = Vector2( 20.689, -10.5732 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2"]
+position = Vector2( 1.85405, -1.05947 )
+shape = SubResource( 1 )
+
+[node name="character_1" type="Sprite" parent="player2"]
 position = Vector2( -0.107635, -0.648842 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 1 )
