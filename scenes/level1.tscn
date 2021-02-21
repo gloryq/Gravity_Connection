@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=14 format=2]
 
+[ext_resource path="res://scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/character/character_left_2.png" type="Texture" id=3]
+[ext_resource path="res://assets/character/character_left_3.png" type="Texture" id=4]
 [ext_resource path="res://assets/platforms/platform_long.png" type="Texture" id=5]
+[ext_resource path="res://assets/character/character_left_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/character/character_right_0.png" type="Texture" id=7]
+[ext_resource path="res://assets/character/character_right_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/character/character_left_0.png" type="Texture" id=9]
+[ext_resource path="res://assets/character/character_right_3.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5717, 43.2153 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -19,6 +28,7 @@ animations = [ {
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 194.789, 166.511 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -33,6 +43,7 @@ rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
 speed_scale = 4.0
+playing = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 321, 302.713 )
