@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
@@ -24,13 +24,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Gradient" id=4]
+[sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 1, 1, 1, 1, 0, 1, 0.6, 0 )
 
-[sub_resource type="GradientTexture" id=5]
-gradient = SubResource( 4 )
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=3]
+[sub_resource type="ParticlesMaterial" id=5]
 emission_shape = 2
 emission_box_extents = Vector3( 20, 1, 1 )
 flag_disable_z = true
@@ -46,7 +46,7 @@ angle = 720.0
 angle_random = 1.0
 scale = 5.0
 scale_random = 1.0
-color_ramp = SubResource( 5 )
+color_ramp = SubResource( 4 )
 hue_variation_random = 1.0
 
 [sub_resource type="GDScript" id=6]
@@ -94,7 +94,7 @@ speed_scale = 4.0
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 limit_left = 0
-limit_top = 0
+limit_top = -1000
 
 [node name="Particles2D" type="Particles2D" parent="Player"]
 position = Vector2( 0, 40 )
@@ -102,9 +102,8 @@ scale = Vector2( 0.990723, 0.988306 )
 z_index = 100
 z_as_relative = false
 amount = 30
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-process_material = SubResource( 3 )
+process_material = SubResource( 5 )
 script = SubResource( 6 )
 
 [node name="level1_platforms" parent="." instance=ExtResource( 5 )]

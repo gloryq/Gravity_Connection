@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/platforms/Platform glow @72x.png" type="Texture" id=4]
 [ext_resource path="res://scenes/level1_platforms.gd" type="Script" id=5]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
 "loop": true,
@@ -14,8 +14,16 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 511.589, 45.3813 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "light",
+"speed": 5.0
+} ]
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
@@ -27,21 +35,13 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "light",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "light",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 264.625, 46.9299 )
 
 [sub_resource type="SpriteFrames" id=7]
@@ -66,11 +66,11 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="long"]
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="long3" type="StaticBody2D" parent="." groups=[
 "platform",
@@ -82,11 +82,11 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="long3"]
-frames = SubResource( 4 )
+frames = SubResource( 3 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long3"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="long2" type="StaticBody2D" parent="." groups=[
 "platform",
@@ -98,11 +98,11 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="long2"]
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long2"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="short" type="StaticBody2D" parent="." groups=[
 "platform",
@@ -114,12 +114,12 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="short"]
-frames = SubResource( 6 )
+frames = SubResource( 5 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="short"]
 position = Vector2( 0.164001, -0.768902 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="short2" type="StaticBody2D" parent="." groups=[
 "platform",
@@ -136,4 +136,4 @@ animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="short2"]
 position = Vector2( 2.164, 3.23106 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
