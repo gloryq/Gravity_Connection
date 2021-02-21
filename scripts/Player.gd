@@ -15,6 +15,10 @@ func _process(delta):
 			if Input.is_action_just_pressed("ui_space"):
 				gravity *= -1
 				
+		if (get_slide_collision(0).collider.is_in_group("end")):
+			# change frame to light up platform
+			get_slide_collision(0).collider.get_child(0).set_frame(1)
+				
 	if Input.is_action_pressed("ui_right"):
 		$"AnimatedSprite".play("default")
 		velocity.x = speed
