@@ -63,8 +63,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	$Particles2D.set_emitting(false)
+# func _process(delta):
+#	pass
 "
 
 [node name="level1" type="Node2D"]
@@ -87,7 +87,7 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 6
+frame = 9
 speed_scale = 4.0
 playing = true
 
