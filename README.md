@@ -1,5 +1,3 @@
 # Gravity Connection
 
-A gravity guy and pac-man inspired 2D game.
-
-# Installation
+A Gravity Guy clone with a twist...
