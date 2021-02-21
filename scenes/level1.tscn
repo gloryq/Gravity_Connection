@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/character/character_left_0.png" type="Texture" id=9]
 [ext_resource path="res://assets/character/character_right_3.png" type="Texture" id=10]
 [ext_resource path="res://scenes/level1_background.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/level1_enemies.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5717, 43.2153 )
@@ -43,12 +44,14 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 2
+frame = 13
 speed_scale = 4.0
-playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 limit_left = 0
+limit_top = 0
 
 [node name="level1_platforms" parent="." instance=ExtResource( 5 )]
+
+[node name="level1_enemies" parent="." instance=ExtResource( 12 )]

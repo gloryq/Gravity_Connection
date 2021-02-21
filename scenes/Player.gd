@@ -16,10 +16,13 @@ func _process(delta):
 				gravity *= -1
 				
 	if Input.is_action_pressed("ui_right"):
+		$"AnimatedSprite".play("default")
 		velocity.x = speed
 	elif Input.is_action_pressed("ui_left"):
+		$"AnimatedSprite".play("default")
 		velocity.x = -speed
 	else:
+		$"AnimatedSprite".stop()
 		velocity.x = 0
 	
 	if gravity < 0:	
