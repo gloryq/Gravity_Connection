@@ -72,6 +72,86 @@ animation = "light"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long"]
 shape = SubResource( 2 )
 
+[node name="long6" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 3442.6, -186.724 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="long6"]
+frames = SubResource( 1 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long6"]
+shape = SubResource( 2 )
+
+[node name="long7" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 3904.01, 131.983 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="long7"]
+frames = SubResource( 1 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long7"]
+shape = SubResource( 2 )
+
+[node name="long8" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 4374.94, -143.913 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="long8"]
+frames = SubResource( 1 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long8"]
+shape = SubResource( 2 )
+
+[node name="long9" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 4726.94, 279.445 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="long9"]
+frames = SubResource( 1 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long9"]
+shape = SubResource( 2 )
+
+[node name="long5" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 2957.4, 131.983 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="long5"]
+frames = SubResource( 1 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="long5"]
+shape = SubResource( 2 )
+
 [node name="long4" type="StaticBody2D" parent="." groups=[
 "platform",
 ]]
@@ -134,6 +214,40 @@ frames = SubResource( 5 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="short"]
+position = Vector2( 0.164001, -0.768902 )
+shape = SubResource( 6 )
+
+[node name="short4" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 2596.07, 627.013 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="short4"]
+frames = SubResource( 5 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="short4"]
+position = Vector2( 0.164001, -0.768902 )
+shape = SubResource( 6 )
+
+[node name="short5" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 3547.44, 546.146 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="short5"]
+frames = SubResource( 5 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="short5"]
 position = Vector2( 0.164001, -0.768902 )
 shape = SubResource( 6 )
 
