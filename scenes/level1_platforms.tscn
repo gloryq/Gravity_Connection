@@ -54,7 +54,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
@@ -62,7 +62,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=9]
 
 [node name="level1_platforms" type="Node2D"]
 position = Vector2( 0, 271.636 )
@@ -146,22 +146,6 @@ frames = SubResource( 1 )
 animation = "light"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="long8"]
-shape = SubResource( 2 )
-
-[node name="long9" type="StaticBody2D" parent="." groups=[
-"platform",
-]]
-position = Vector2( 4726.94, 279.445 )
-scale = Vector2( 0.5, 0.5 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="long9"]
-frames = SubResource( 1 )
-animation = "light"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="long9"]
 shape = SubResource( 2 )
 
 [node name="long5" type="StaticBody2D" parent="." groups=[
@@ -279,6 +263,23 @@ animation = "light"
 position = Vector2( 0.164001, -0.768902 )
 shape = SubResource( 6 )
 
+[node name="short5" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 4610.44, 278.247 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="short5"]
+frames = SubResource( 5 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="short5"]
+position = Vector2( 0.164001, -0.768902 )
+shape = SubResource( 6 )
+
 [node name="short2" type="StaticBody2D" parent="." groups=[
 "platform",
 ]]
@@ -299,14 +300,14 @@ shape = SubResource( 6 )
 [node name="end" type="StaticBody2D" parent="." groups=[
 "end",
 ]]
-position = Vector2( 5009.2, 185.234 )
+position = Vector2( 4754.12, 72.7443 )
 scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="end"]
-frames = SubResource( 9 )
+frames = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end"]
-shape = SubResource( 8 )
+shape = SubResource( 9 )

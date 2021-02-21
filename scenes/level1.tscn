@@ -71,7 +71,7 @@ func _ready():
 
 [sub_resource type="Gradient" id=7]
 offsets = PoolRealArray( 0, 0.528256, 1 )
-colors = PoolColorArray( 1, 1, 1, 0, 1, 0.546875, 0.546875, 1, 1, 1, 1, 0 )
+colors = PoolColorArray( 1, 1, 1, 0, 0.785156, 0.346573, 0.346573, 1, 1, 1, 1, 0 )
 
 [sub_resource type="GradientTexture" id=8]
 gradient = SubResource( 7 )
@@ -122,6 +122,7 @@ speed_scale = 4.0
 current = true
 limit_left = 0
 limit_top = -1000
+smoothing_enabled = true
 
 [node name="Particles2D" type="Particles2D" parent="Player"]
 position = Vector2( 0, 40 )

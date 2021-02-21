@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/LOSE SCREEN.png" type="Texture" id=1]
 [ext_resource path="res://scripts/LOSE SCREEN.gd" type="Script" id=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.528256, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 0.785156, 0.346573, 0.346573, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 8000, 4000, 1 )
+flag_disable_z = true
+gravity = Vector3( -98, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = -0.01
+orbit_velocity_random = 1.0
+radial_accel = -100.0
+radial_accel_random = 1.0
+damping = 100.0
+damping_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 5.0
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+hue_variation_random = 1.0
 
 [node name="lose" type="Node2D"]
 
@@ -10,3 +36,9 @@ position = Vector2( 513.23, 301.619 )
 scale = Vector2( 0.237585, 0.239788 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+amount = 5000
+visibility_rect = Rect2( -100, -1500, 8000, 4000 )
+local_coords = false
+process_material = SubResource( 3 )
