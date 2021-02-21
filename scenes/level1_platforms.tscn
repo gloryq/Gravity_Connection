@@ -137,6 +137,23 @@ animation = "light"
 position = Vector2( 0.164001, -0.768902 )
 shape = SubResource( 6 )
 
+[node name="short3" type="StaticBody2D" parent="." groups=[
+"platform",
+]]
+position = Vector2( 2563.35, -255.507 )
+scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="short3"]
+frames = SubResource( 5 )
+animation = "light"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="short3"]
+position = Vector2( 0.164001, -0.768902 )
+shape = SubResource( 6 )
+
 [node name="short2" type="StaticBody2D" parent="." groups=[
 "platform",
 ]]
