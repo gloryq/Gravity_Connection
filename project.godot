@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Gravity_Connection"
-run/main_scene="res://scenes/level1.tscn"
+run/main_scene="res://scenes/Start_Screen.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
