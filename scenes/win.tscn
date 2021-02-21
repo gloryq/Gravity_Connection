@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/WIN SCREEN.png" type="Texture" id=1]
+
+[node name="win" type="Node2D"]
+
+[node name="WIN SCREEN" type="Sprite" parent="."]
+position = Vector2( 512.03, 301.568 )
+scale = Vector2( 0.238215, 0.238104 )
+texture = ExtResource( 1 )

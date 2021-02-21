@@ -1,8 +1,11 @@
 extends KinematicBody2D
 
 var velocity = Vector2()
-var gravity = 300
-var speed = 300
+var gravity = 400
+const SPEED = 300
+var win = false
+const SECOND = 30
+var timer = -1
 
 func _process(delta):
 	# platform collisions
@@ -15,19 +18,13 @@ func _process(delta):
 			if Input.is_action_just_pressed("ui_space"):
 				gravity *= -1
 				
-		if (get_slide_collision(0).collider.is_in_group("end")):
-			# change frame to light up platform
+		if (get_slide_collision(0).collider.is_in_group("end") and not win):
 			get_slide_collision(0).collider.get_child(0).set_frame(1)
-				
-	if Input.is_action_pressed("ui_right"):
-		$"AnimatedSprite".play("default")
-		velocity.x = speed
-	elif Input.is_action_pressed("ui_left"):
-		$"AnimatedSprite".play("default")
-		velocity.x = -speed
-	else:
-		$"AnimatedSprite".stop()
-		velocity.x = 0
+			win = true
+			timer = SECOND
+			
+	velocity.x = SPEED	
+	$"AnimatedSprite".play("default")
 	
 	if gravity < 0:	
 		$"AnimatedSprite".flip_v = true
@@ -37,3 +34,12 @@ func _process(delta):
 	velocity.y = gravity
 	
 	velocity = move_and_slide(velocity)
+	
+	if position.y < -200 or position.y > 1100:
+		get_tree().change_scene("res://scenes/lose.tscn")
+		
+	
+	if timer > 0:
+		timer -= 1
+	if timer == 0:
+		get_tree().change_scene("res://scenes/win.tscn")
