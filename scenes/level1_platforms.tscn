@@ -9,6 +9,7 @@ extents = Vector2( 511.589, 45.3813 )
 
 [node name="long" type="StaticBody2D" parent="."]
 position = Vector2( 534.896, 367.085 )
+scale = Vector2( 0.5, 0.5 )
 __meta__ = {
 "_edit_group_": true
 }

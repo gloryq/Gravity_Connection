@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
 [ext_resource path="res://assets/character/character_left_2.png" type="Texture" id=3]
 [ext_resource path="res://assets/character/character_left_3.png" type="Texture" id=4]
+[ext_resource path="res://scenes/level1_platforms.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/character/character_left_1.png" type="Texture" id=6]
 [ext_resource path="res://assets/character/character_right_0.png" type="Texture" id=7]
 [ext_resource path="res://assets/character/character_right_1.png" type="Texture" id=8]
@@ -39,6 +40,8 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 2
+frame = 3
 speed_scale = 4.0
 playing = true
+
+[node name="level1_platforms" parent="." instance=ExtResource( 5 )]
