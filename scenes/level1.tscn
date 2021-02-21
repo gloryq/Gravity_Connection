@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/character/character_right_3.png" type="Texture" id=10]
 [ext_resource path="res://scenes/level1_background.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/level1_enemies.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/FINAL TOUCH.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5717, 43.2153 )
@@ -71,6 +72,10 @@ func _ready():
 [node name="level1" type="Node2D"]
 
 [node name="level1_background" parent="." instance=ExtResource( 11 )]
+
+[node name="FINAL TOUCH" type="Sprite" parent="level1_background"]
+position = Vector2( 4996.02, 386.115 )
+texture = ExtResource( 13 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 101.264, 210.796 )
