@@ -1,9 +1,5 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/character_idle.png" type="Texture" id=1]
-[ext_resource path="res://assets/character_3.png" type="Texture" id=2]
-[ext_resource path="res://assets/character_1.png" type="Texture" id=3]
-[ext_resource path="res://assets/character_2.png" type="Texture" id=4]
 [ext_resource path="res://assets/platforms/platform_long.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -11,7 +7,7 @@ extents = Vector2( 33.5717, 43.2153 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [  ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -36,12 +32,14 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 2
+speed_scale = 4.0
 
-[node name="platform_long" type="Sprite" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 321, 302.713 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="platform_long" type="Sprite" parent="StaticBody2D"]
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="platform_long"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 3 )
