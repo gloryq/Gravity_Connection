@@ -2,13 +2,9 @@
 .import/
 
 # Binaries
-bin/
+bin/*
+!bin/osx
+!bin/win64
+!bin/x11
 build/
 lib/
-
-# Exceptions
-!libgitapi.dll
-!libgitapi.exp
-!libgitapi.pdb
-!libgitapi.dylib
-!libgitapi.so
