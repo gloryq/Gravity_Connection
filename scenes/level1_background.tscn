@@ -12,15 +12,12 @@
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 481.613, 296.19 )
+position = Vector2( 527.94, 164.337 )
 scale = Vector2( 0.248804, 0.159288 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sprite2" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 484.646, 946.507 )
+position = Vector2( 533.801, 814.654 )
 scale = Vector2( 0.248804, 0.159288 )
 texture = ExtResource( 1 )
 flip_v = true
