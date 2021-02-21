@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/enemy/Flying 1@72x.png" type="Texture" id=1]
+[ext_resource path="res://assets/enemy/Flying 2@72x.png" type="Texture" id=2]
+[ext_resource path="res://assets/enemy/Flying 3@72x.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "flying",
+"speed": 6.0
+} ]
+
+[node name="level1_enemies" type="Node2D"]
+
+[node name="enemy1" type="AnimatedSprite" parent="."]
+position = Vector2( 107.093, 95.754 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 1 )
+animation = "flying"
+frame = 1
+playing = true
