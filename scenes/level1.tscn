@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
@@ -24,6 +24,50 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="Gradient" id=4]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 1, 0.6, 0 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 20, 1, 1 )
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+radial_accel = 100.0
+radial_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 5.0
+scale_random = 1.0
+color_ramp = SubResource( 5 )
+hue_variation_random = 1.0
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends Particles2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+# func _process(delta):
+#	pass
+"
+
 [node name="level1" type="Node2D"]
 
 [node name="level1_background" parent="." instance=ExtResource( 11 )]
@@ -44,13 +88,24 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 13
+frame = 9
 speed_scale = 4.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 limit_left = 0
 limit_top = 0
+
+[node name="Particles2D" type="Particles2D" parent="Player"]
+position = Vector2( 0, 40 )
+scale = Vector2( 0.990723, 0.988306 )
+z_index = 100
+z_as_relative = false
+amount = 30
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = false
+process_material = SubResource( 3 )
+script = SubResource( 6 )
 
 [node name="level1_platforms" parent="." instance=ExtResource( 5 )]
 
