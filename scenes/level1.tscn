@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/character/character_right_2.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/character/character_right_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/character/character_left_0.png" type="Texture" id=9]
 [ext_resource path="res://assets/character/character_right_3.png" type="Texture" id=10]
+[ext_resource path="res://scenes/level1_background.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5717, 43.2153 )
@@ -24,8 +25,10 @@ animations = [ {
 
 [node name="level1" type="Node2D"]
 
+[node name="level1_background" parent="." instance=ExtResource( 11 )]
+
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 194.789, 166.511 )
+position = Vector2( 101.264, 210.796 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -40,8 +43,12 @@ position = Vector2( -0.107635, -0.648849 )
 rotation = 3.14159
 scale = Vector2( 0.08, -0.08 )
 frames = SubResource( 2 )
-frame = 3
+frame = 2
 speed_scale = 4.0
 playing = true
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
 
 [node name="level1_platforms" parent="." instance=ExtResource( 5 )]
