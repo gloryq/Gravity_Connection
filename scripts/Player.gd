@@ -4,7 +4,7 @@ var velocity = Vector2()
 var gravity = 400
 const SPEED = 300
 var win = false
-const SECOND = 30
+const WAIT = 10
 var timer = -1
 
 func _process(delta):
@@ -21,7 +21,7 @@ func _process(delta):
 		if (get_slide_collision(0).collider.is_in_group("end") and not win):
 			get_slide_collision(0).collider.get_child(0).set_frame(1)
 			win = true
-			timer = SECOND
+			timer = WAIT
 			
 	velocity.x = SPEED	
 	$"AnimatedSprite".play("default")
